@@ -2,7 +2,7 @@
 Luckybet is an international blockchain-based lottery game operating on the Meter blockchain. It is a community-building activity and a gateway to demystifying blockchain development concepts. Most importantly, it helps to foster broader adoption of blockchain-based applications to the general public.
 
 ### Demo
-
+https://luckybet-meter.vercel.app
 
 ### Tokens
 The initial token supporting the game is the Meter $MTR native token. Players will purchase tickets using this token. The prize pool jackpot will be paid out in $MTR tokens.
