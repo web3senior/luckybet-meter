@@ -1,0 +1,143 @@
+@import './../styles/components/responsive';
+
+.section {
+  height: inherit;
+  user-select: none;
+  background-color: var(--color-primary);
+  overflow: hidden;
+  isolation: isolate;
+
+  &:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    bottom: 5rem;
+    background: url('./../assets/gold-coin-bg.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 30vw;  
+    @include small-down() {
+      background-size: 200px; 
+    }
+  }
+
+
+
+  a {
+    font-weight: bold;
+    color: #088ae9;
+  }
+
+  figure.caveman {
+    position: absolute;
+    right: 8rem;
+    bottom: 5rem;
+    z-index: 1;
+    img {
+      margin: 0 auto;
+      width: 15vw;
+      max-width: 400px;
+    }
+  }
+
+  a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 16.1856px;
+    gap: 14.39px;
+    width: 180px;
+    height: 104px;
+    color: var(--color-secondary);
+    font-size: 1rem;
+    background: none;
+    color: var(--color-tertiary);
+    background-image: url('./../assets/btn-border.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    z-index: 999;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+
+    &[disabled] {
+      opacity: 0.4;
+      color: #212121;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.grid {
+  gap: 0.7rem;
+}
+
+.grid__item {
+  position: relative;
+  padding: 0.9rem 0.8rem;
+  border-radius: var(--global-border-radius);
+  opacity: 1;
+  transition-property: box-shadow, transform;
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.29, 0.99);
+
+  &:hover {
+    background-color: #f4f4f4;
+    .close-btn {
+      i {
+        top: 0;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, -0.1rem) rotate(-25deg);
+  }
+  50% {
+    transform: translate(0, 0.8rem) rotate(-25deg);
+  }
+  100% {
+    transform: translate(0, -0.1rem) rotate(-25deg);
+  }
+}
+
+.bubble {
+  position: absolute;
+  width: 200px;
+  height: 35%;
+  right: -3rem;
+  top: -7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2vmin;
+  background: #ffd;
+  box-shadow: 0 -0.25vmin, 0 0.125vmin;
+  z-index: 999;
+  border: 0.1vmin solid black;
+  border-radius: 100%;
+font-family: 'Open Sans', Courier, monospace;
+font-weight: 500;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    bottom: -51%;
+    border-radius: 50%;
+    left: 10%;
+    box-shadow: 0.5vmin 0, 2vmin -0.5vmin #ffd, 2vmin -0.5vmin 0 0.5vmin;
+    clip-path: polygon(0% 49%, 150% 48%, 150% 100%, 0% 100%);
+  }
+}
